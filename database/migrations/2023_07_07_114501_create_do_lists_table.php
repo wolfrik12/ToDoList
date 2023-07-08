@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->string('time');
+           $table->time('time');
             $table->string('status');
             $table->string('user_id');
         });
