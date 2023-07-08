@@ -35,14 +35,9 @@ foreach ($expiredTasks as $task) {
         $task->save();
     }
 
-    $id = null; // Здесь должно быть значение id или null
-
-
-    if ($id === null) {
-        $lists = DoList::all();
-    } else {
+   
         $lists = DoList::where('user_id',Auth()->user()->id)->paginate(5);
-    }
+    
 
 
         return view('toDoList',['lists'=>$lists]);
