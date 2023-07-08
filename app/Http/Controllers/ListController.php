@@ -65,7 +65,7 @@ foreach ($expiredTasks as $task) {
         ]);
 
 
-        // Redirect or return a response
+     
         return redirect()->back()->with('success', 'Вы успешно добавили задачу!');
 }
 
