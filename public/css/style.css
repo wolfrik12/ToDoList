@@ -1,0 +1,33 @@
+.navbar-brand span{
+    color: blue;
+}
+.container .a{
+    color: blue;
+    text-decoration:none;
+    transition: 1s;
+
+}
+.container .a:hover{
+    text-decoration:underline;
+    transition: 1s;
+}
+.container h3{
+    color: black;
+}
+.form{
+    margin-left: 25px;
+}
+.form button{
+    margin-top: 10px;
+}
+.status-in-progress {
+    color: yellow;
+  }
+
+  .status-completed {
+    color: green;
+  }
+
+  .status-time-expired {
+    color: red;
+  }
