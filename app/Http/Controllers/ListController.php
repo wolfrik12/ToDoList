@@ -11,7 +11,7 @@ class ListController extends Controller
         $userId = Auth::id();
 
 
-        if ($userId) {
+        if ($userId ) {
             $lists = DoList::where('user_id', $userId)->get();
             return redirect()->route('task');
         } else {
@@ -20,6 +20,7 @@ class ListController extends Controller
         }
       }
       public function task(){
+
         $expiredTasks = DoList::where('status', 'В процессе')
         ->where('time', '<', Carbon::now())
         ->get();
@@ -29,10 +30,16 @@ foreach ($expiredTasks as $task) {
         $task->save();
     }
 
+    $id = null; // Здесь должно быть значение id или null
 
 
-
+    if ($id === null) {
+        $lists = DoList::all();
+    } else {
         $lists = DoList::where('user_id',Auth()->user()->id)->paginate(5);
+    }
+
+
         return view('toDoList',['lists'=>$lists]);
 }
 
@@ -50,6 +57,7 @@ foreach ($expiredTasks as $task) {
             $status = 'В процессе';
 
         DoList::create([
+
             'name' => $validatedData['name'],
             'time' => $validatedData['time'],
             'user_id'=>$request->user()->id,
