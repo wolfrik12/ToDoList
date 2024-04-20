@@ -1,0 +1,51 @@
+.navbar-brand span {
+    color: blue;
+}
+
+.container .a {
+    color: blue;
+    text-decoration: none;
+    transition: 1s;
+
+}
+
+.container .a:hover {
+    text-decoration: underline;
+    transition: 1s;
+}
+
+.container h3 {
+    color: black;
+}
+
+.form {
+    border: 1px solid #ccc;
+    /* Цвет и толщина обводки */
+    padding: 15px;
+    /* Отступы внутри формы */
+    border-radius: 5px;
+    /* Закругление углов формы */
+    margin-left: 25px;
+}
+
+.form button {
+    margin-top: 10px;
+}
+
+.status-in-progress {
+    color: yellow;
+}
+
+.status-completed {
+    color: green;
+}
+
+.status-time-expired {
+    color: red;
+}
+
+select {
+    background: transparent;
+    border: 0;
+    outline: none;
+}
